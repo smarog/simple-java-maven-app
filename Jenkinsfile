@@ -18,5 +18,10 @@ pipeline{
         sh 'mvn test'
       }
     }
+    stage('Deliver to developers'){
+      steps{
+        sh'./jenkins/scripts/deliver.sh'
+      }
+    }
   }
 }
